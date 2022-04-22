@@ -10,7 +10,7 @@ Tu tarea consiste en añadir una nueva funcionalidad al sistema para que podamos
 Simple ¿no?, ahora empieza lo interesante:
 
 * Los items degradan la calidad en una unidad por cada actualización.
-* Cuando la fecha de venta a pasado, la calidad degrada al doble de velocidad.
+* Cuando la fecha de venta ha pasado, la calidad degrada al doble de velocidad.
 * La calidad de un item no es nunca negativa.
 * El item "aged brie" incrementa su calidad en lugar de decrementarla según pasan los días.
 * La calidad de un item nunca es mayor de 50.

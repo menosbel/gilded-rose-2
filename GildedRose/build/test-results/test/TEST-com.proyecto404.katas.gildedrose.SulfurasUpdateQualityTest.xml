@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.proyecto404.katas.gildedrose.SulfurasUpdateQualityTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-06-19T16:20:13" hostname="DESKTOP-641SJJA" time="0.0">
-  <properties/>
-  <testcase name="never_decreases_quality" classname="com.proyecto404.katas.gildedrose.SulfurasUpdateQualityTest" time="0.0"/>
-  <testcase name="never_has_to_be_sold" classname="com.proyecto404.katas.gildedrose.SulfurasUpdateQualityTest" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

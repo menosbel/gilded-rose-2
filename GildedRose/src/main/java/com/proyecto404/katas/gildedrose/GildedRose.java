@@ -5,7 +5,7 @@ import java.util.List;
 
 public class GildedRose {
 
-   public static void main(String[] args) {
+    public static void main(String[] args) {
 
         List<Item> items = new ArrayList<>();
 
@@ -20,7 +20,8 @@ public class GildedRose {
 
         for (Item item : items) {
             System.out.println("Item: " + item.name + ",Quality: " + item.quality + ",SellIn: " + item.sellIn);
-       }  
+        }
+
     }
 
     public static void updateQuality(List<Item> items) {
