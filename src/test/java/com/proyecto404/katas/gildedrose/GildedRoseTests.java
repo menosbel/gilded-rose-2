@@ -11,19 +11,6 @@ import static com.proyecto404.katas.gildedrose.GildedRose.updateQuality;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class GildedRoseTests {
-    @ParameterizedTest
-    @CsvSource({"10, 20, 9, 19"})
-    public void regular_item(Integer sellIn, Integer quality, Integer expectedSellIn, Integer expectedQuality) {
-        Item item = new Item("+5 Dexterity Vest", sellIn, quality);
-        List<Item> items = new ArrayList<>();
-        items.add(item);
-
-        updateQuality(items);
-
-        assertThat(item.quality).isEqualTo(expectedQuality);
-        assertThat(item.sellIn).isEqualTo(expectedSellIn);
-    }
-
     @Test
     public void general_output() {
         List<Item> items = new ArrayList<>();
