@@ -2,7 +2,7 @@ package com.proyecto404.katas.gildedrose.updaters;
 
 import com.proyecto404.katas.gildedrose.Item;
 
-class RegularItemUpdater extends ProductUpdater {
+class RegularItemUpdater extends ItemUpdater {
     @Override
     public void update(Item item) {
         decreaseSellIn(item);

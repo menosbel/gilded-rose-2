@@ -1,6 +1,6 @@
 package com.proyecto404.katas.gildedrose;
 
-import com.proyecto404.katas.gildedrose.updaters.ProductUpdater;
+import com.proyecto404.katas.gildedrose.updaters.ItemUpdater;
 import com.proyecto404.katas.gildedrose.updaters.UpdaterFactory;
 
 import java.util.ArrayList;
@@ -28,7 +28,7 @@ public class GildedRose {
 
     public static void updateQuality(List<Item> items) {
         for (Item item: items) {
-            ProductUpdater updater = updaterFactory.create(item.name);
+            ItemUpdater updater = updaterFactory.create(item.name);
             updater.update(item);
         }
     }

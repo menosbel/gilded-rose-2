@@ -2,7 +2,7 @@ package com.proyecto404.katas.gildedrose.updaters;
 
 import com.proyecto404.katas.gildedrose.Item;
 
-class BackstagePassesUpdater extends ProductUpdater {
+class BackstagePassesUpdater extends ItemUpdater {
     @Override
     public void update(Item item) {
         updateQuality(item);
@@ -11,16 +11,22 @@ class BackstagePassesUpdater extends ProductUpdater {
     }
 
     private void updateQuality(Item item) {
-        increaseQuality(item);
-        if (tenDaysOrLessToConcert(item)) increaseQuality(item);
-        if (fiveDaysOrLessToConcert(item)) increaseQuality(item);
+        if (fiveDaysOrLessToConcert(item)) {
+            increaseQualityBy(item, 3);
+        }
+        if (betweenFiveAndTenDaysToConcert(item)) {
+            increaseQualityBy(item, 2);
+        }
+        if (moreThanTenDaysToConcert(item)) {
+            increaseQualityBy(item, 1);
+        }
     }
 
-    private boolean fiveDaysOrLessToConcert(Item item) {
-        return item.getSellIn() <= 5;
+    private boolean fiveDaysOrLessToConcert(Item item) { return item.getSellIn() <= 5; }
+
+    private boolean betweenFiveAndTenDaysToConcert(Item item) {
+        return item.getSellIn() <= 10 && item.getSellIn() > 5;
     }
 
-    private boolean tenDaysOrLessToConcert(Item item) {
-        return item.getSellIn() <= 10;
-    }
+    private boolean moreThanTenDaysToConcert(Item item) { return item.getSellIn() > 10;}
 }

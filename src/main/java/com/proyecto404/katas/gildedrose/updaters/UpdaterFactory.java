@@ -1,7 +1,7 @@
 package com.proyecto404.katas.gildedrose.updaters;
 
 public class UpdaterFactory {
-    public ProductUpdater create(String itemName) {
+    public ItemUpdater create(String itemName) {
         switch (itemName) {
             case "Sulfuras, Hand of Ragnaros":
                 return new SulfurasUpdater();

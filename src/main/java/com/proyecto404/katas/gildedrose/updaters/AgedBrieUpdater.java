@@ -2,7 +2,7 @@ package com.proyecto404.katas.gildedrose.updaters;
 
 import com.proyecto404.katas.gildedrose.Item;
 
-class AgedBrieUpdater extends ProductUpdater {
+class AgedBrieUpdater extends ItemUpdater {
     @Override
     public void update(Item item) {
         decreaseSellIn(item);
@@ -10,7 +10,7 @@ class AgedBrieUpdater extends ProductUpdater {
     }
 
     private void updateQuality(Item item) {
-        increaseQuality(item);
-        if (isExpired(item)) increaseQuality(item);
+        increaseQualityBy(item, 1);
+        if (isExpired(item)) increaseQualityBy(item, 1);
     }
 }
